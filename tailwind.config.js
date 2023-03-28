@@ -1,6 +1,22 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  content: ['./*.html'],
-  theme: {},
+  content: ["./*.html"],
+  theme: {
+    extend: {
+      colors: {
+        // PRIMARY COLORS
+        primary: "#437EF7",
+        midGreen: "#36B37E",
+        textDarkGrey: "#272D37",
+        textLightGrey: "#5F6D7E",
+        borderGrey: "#EAEBF0",
+      },
+      fontFamily: {
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
   plugins: [],
 };
 

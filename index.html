@@ -1,24 +1,211 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/main.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"
+    ></script>
 
-  <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
-  <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+    <title>Oownee | Landing page</title>
+  </head>
 
-  <title>Oownee | Landing page</title>
-</head>
+  <body>
+    <!-- MAIN CONTAINER START -->
+    <main class="h-full font-inter">
+      <!-- HEADER SECTION START -->
+      <header
+        class="border-b border-borderGrey bg-white fixed top-0 left-0 w-full z-20"
+        x-data="{
+        navItems: [
+          {
+            item: 'home',
+            url: '#'
+          },
+          {
+            item: 'feature',
+            url: '#'
+          },
+          {
+            item: 'pricing',
+            url: '#'
+          },
+          {
+            item: 'Faq',
+            url: '#'
+          },
+          {
+            item: 'our blog',
+            url: '#'
+          },
+          {
+            item: 'contact',
+            url: '#'
+          },
+          {
+            item: 'language',
+            url: '#'
+          }
+        ]
+      }"
+      >
+        <div
+          class="container flex mx-auto px-8 md:px-12 lg:px-24 max-w-[120rem] items-center h-[90px] justify-between"
+        >
+          <!-- LOGO -->
+          <div>
+            <a href="#">
+              <img
+                src="images/logo.png"
+                alt="Oownee Logo"
+                title="Ownee Logo"
+                class="w-[110px] h-auto"
+              />
+            </a>
+          </div>
 
-<body>
-  <!-- MAIN CONTAINER START -->
-  <main class="h-full">
+          <!-- NAVIGATION MENU-->
+          <nav>
+            <ul class="flex gap-x-6 lg:gap-x-10">
+              <template x-for="(nav, index) in navItems" :key="index">
+                <li>
+                  <a
+                    :href="nav.url"
+                    x-text="nav.item"
+                    class="capitalize text-textDarkGrey hover:text-textDarkGrey/60 transition-all text-base font-semibold"
+                  ></a>
+                </li>
+              </template>
+            </ul>
+          </nav>
 
-  </main>
-  <!-- MAIN CONTAINER END -->
-</body>
+          <!-- CTA -->
+          <div>
+            <a
+              href="#"
+              class="bg-primary hover:bg-primary/80 transition-all text-white text-base font-semibold py-3.5 px-3 rounded-md block leading-none"
+            >
+              Property manager
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER SECTION END -->
 
+      <!-- HERO SECTION START -->
+      <section
+        class="overflow-hidden relative z-10"
+        x-data="{
+          heroSubtitle: 'used by 12% of top managers',
+          heroMainText1: 'Manage Your Properties',
+          heroMainText2: 'Like a Pro!',
+          heroCaption: 'Manage your property simply, efficiently and quickly with Oownee ❤️',
+      }"
+      >
+        <div
+          class="container mx-auto px-8 md:px-12 lg:px-24 max-w-[120rem] pt-[90px] grid grid-cols-6"
+        >
+          <!-- HERO CONTENT -->
+          <div class="col-span-2 py-[95px]">
+            <!-- HERO SUBTITLE -->
+            <div class="flex gap-x-5 mb-7">
+              <span>
+                <img src="images/lightning.png" alt="lightning" />
+              </span>
+              <p
+                class="text-base font-semibold text-primary uppercase"
+                x-text="heroSubtitle"
+              ></p>
+            </div>
+
+            <!-- HERO MAIN TEXT -->
+            <div class="mb-9">
+              <h1
+                class="text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[3.1rem] font-bold text-textDarkGrey flex flex-col relative"
+              >
+                <span class="leading-[65px]" x-text="heroMainText1"></span>
+                <span
+                  class="text-primary mt-3.5 relative"
+                  x-text="heroMainText2"
+                ></span>
+                <span class="block w-[70%] mt-3">
+                  <img
+                    src="images/underline.png"
+                    class="block w-full h-auto"
+                    alt=""
+                  />
+                </span>
+              </h1>
+            </div>
+
+            <!-- HERO CAPTION -->
+            <p class="text-lg text-textLightGrey mb-9" x-text="heroCaption"></p>
+
+            <!-- EMAIL INPUT SECTION -->
+            <form class="w-full relative h-[61px] flex mb-7">
+              <!-- EMAIL INPUT -->
+              <input
+                type="search"
+                class="w-[55%] appearance-none bg-white border outline-none border-[#d3d3d3] focus:border-primary focus:ring-0 px-3 text-base rounded-l-md h-full"
+                placeholder="Enter your email"
+                value=""
+                name="e"
+              />
+              <!-- EMAIL SUBMIT BUTTON -->
+              <button
+                type="button"
+                class="bg-midGreen w-[45%] rounded-r-md rounded-l-none transition-colors hover:bg-midGreen/80 text-white flex flex-col items-center justify-center px-3 font-semibold text-sm text-center"
+              >
+                <span> Free Start </span>
+                <span class="text-[10px] font-normal">
+                  Your account is ready in 60s
+                </span>
+              </button>
+            </form>
+
+            <!-- HERO DISCLAIMER -->
+            <p class="text-textLightGrey text-sm mb-7">
+              You can start 3 units more information? (
+              <a href="#" class="underline text-textDarkGrey"
+                >Offers limited in time</a
+              >
+              )no credit card required.
+            </p>
+
+            <!-- APP DOWNLOAD IMAGE LINKS -->
+            <div class="flex gap-x-3">
+              <a href="#">
+                <img src="images/android-store.png" alt="Google play store" />
+              </a>
+              <a href="#">
+                <img src="images/apple-store.png" alt="Apple store" />
+              </a>
+            </div>
+          </div>
+
+          <!-- HERO IMAGE -->
+          <div class="col-span-4">
+            <img
+              src="images/hero-image.png"
+              alt="Oownee hero image"
+              class="w-[70%] h-auto -right-[10%] absolute mt-5"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- HERO SECTION END -->
+    </main>
+    <!-- MAIN CONTAINER END -->
+  </body>
 </html>
