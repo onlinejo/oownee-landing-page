@@ -376,7 +376,7 @@
               x-text="sectionHeading"
             ></h2>
             <p
-              class="text-textLightGrey text-sm md:text-base lg:max-w-7xl mx-auto"
+              class="text-textMidDarkGrey text-sm md:text-base lg:max-w-7xl mx-auto"
               x-text="sectionDescription"
             ></p>
           </div>
@@ -387,6 +387,83 @@
         </div>
       </section>
       <!-- ALL IN ONE PROPERTY SECTION END -->
+
+      <!-- BENEFITS SECTION START -->
+      <section
+        x-data="{
+          benefits: [
+            {
+              heading: 'Rent Management',
+              description: 'Easily collect rent from tenants, track payment history, and set up automatic reminders for late payments.',
+              icon: 'images/rent-management.png',
+            },
+            {
+              heading: 'Easy Accounting',
+              description: 'Simplifies your property management finances by automating your accounting tasks with few clicks.',
+              icon: 'images/easy-accounting.png',
+            },
+            {
+              heading: 'Tenant Mangement',
+              description: 'Streamlines your interactions with tenants by providing platform for communication & maintenance requests',
+              icon: 'images/tenant-management.png',
+            },
+            {
+              heading: 'Send Mails',
+              description: 'Offers customizable email templates for property management tasks, saving time & effort.',
+              icon: 'images/send-mails.png',
+            },
+            {
+              heading: 'Control Properties',
+              description: 'Full control over your properties by providing an easy-to-use platform for managing all aspects of your portfolio.',
+              icon: 'images/control-properties.png',
+            },
+            {
+              heading: 'Control Incidents',
+              description: 'Receive real-time notifications of incidents reported by tenants, and track the status of each incident.',
+              icon: 'images/control-incidents.png',
+            },
+            {
+              heading: 'Manage Finances',
+              description: 'Easily track income and expenses, generate financial reports, and stay on top of tax obligations.',
+              icon: 'images/manage-finances.png',
+            },
+            {
+              heading: 'Stay Organized',
+              description: 'Schedule reminders, set up to-do lists, and track progress on ongoing tasks all from a centralized hub.',
+              icon: 'images/stay-organized.png',
+            },
+          ]
+        }"
+      >
+        <div
+          class="container mx-auto px-8 md:px-12 lg:px-24 max-w-[120rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7 gap-y-16 pb-12"
+        >
+          <!-- BENEFIT -->
+          <template x-for="(benefit, index) in benefits" :key="index">
+            <div
+              class="flex flex-col gap-4 text-center justify-start items-center"
+            >
+              <!-- ICON -->
+              <span class="flex items-center justify-center">
+                <img
+                  :src="benefit.icon"
+                  :alt="benefit.heading"
+                  :title="benefit.heading"
+                />
+              </span>
+              <h3
+                class="font-semibold text-textDarkGrey text-lg lg:text-xl"
+                x-text="benefit.heading"
+              ></h3>
+              <p
+                class="text-textLightGrey text-sm md:text-base"
+                x-text="benefit.description"
+              ></p>
+            </div>
+          </template>
+        </div>
+      </section>
+      <!-- BENEFITS SECTION END -->
     </main>
     <!-- MAIN CONTAINER END -->
   </body>
