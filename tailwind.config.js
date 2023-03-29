@@ -10,6 +10,7 @@ module.exports = {
         midGreen: "#36B37E",
         textDarkGrey: "#272D37",
         textLightGrey: "#5F6D7E",
+        sectionLightBlue: "#F8F9FB",
         borderGrey: "#EAEBF0",
       },
       fontFamily: {
