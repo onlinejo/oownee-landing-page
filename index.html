@@ -305,8 +305,8 @@
             >
               <!-- EMAIL INPUT -->
               <input
-                type="search"
-                class="lg:w-[55%] appearance-none bg-white border outline-none border-[#d3d3d3] focus:border-primary focus:ring-0 py-4 lg:py-0 px-3 text-base rounded-l-md h-full"
+                type="email"
+                class="lg:w-[55%] appearance-none bg-white border outline-none border-[#d3d3d3] focus:border-primary focus:ring-0 py-4 lg:py-0 px-3 text-base rounded-l-md rounded-r-md lg:rounded-r-none h-full mb-1 lg:mb-0"
                 placeholder="Enter your email"
                 value=""
                 name="e"
@@ -314,7 +314,7 @@
               <!-- EMAIL SUBMIT BUTTON -->
               <button
                 type="button"
-                class="bg-midGreen lg:w-[45%] rounded-r-md rounded-l-none transition-colors hover:bg-midGreen/80 text-white flex flex-col items-center justify-center px-3 py-1 lg:py-0 font-semibold text-sm text-center"
+                class="bg-midGreen lg:w-[45%] rounded-r-md rounded-l-md lg:rounded-l-none transition-colors hover:bg-midGreen/80 text-white flex flex-col items-center justify-center px-3 py-1 lg:py-0 font-semibold text-sm text-center"
               >
                 <span> Free Start </span>
                 <span class="text-[10px] font-normal">
@@ -464,6 +464,64 @@
         </div>
       </section>
       <!-- BENEFITS SECTION END -->
+
+      <!-- ENTER EMAIL SECTION START -->
+      <section>
+        <div
+          class="container mx-auto px-8 md:px-12 lg:px-24 max-w-[120rem] flex justify-center items-center py-12"
+        >
+          <div class="max-w-xl w-full">
+            <form class="w-full relative lg:h-[61px] flex flex-col lg:flex-row">
+              <!-- EMAIL INPUT -->
+              <input
+                type="email"
+                class="lg:w-[60%] appearance-none bg-white border outline-none border-[#d3d3d3] focus:border-primary focus:ring-0 py-4 lg:py-0 px-3 text-base rounded-l-md rounded-r-md lg:rounded-r-none h-full mb-1 lg:mb-0"
+                placeholder="Enter your email"
+                value=""
+                name="e"
+              />
+              <!-- EMAIL SUBMIT BUTTON -->
+              <button
+                type="button"
+                class="bg-midGreen lg:w-[40%] rounded-r-md rounded-l-md lg:rounded-l-none transition-colors hover:bg-midGreen/80 text-white flex flex-col items-center justify-center px-3 py-1 lg:py-0 font-semibold text-sm text-center"
+              >
+                <span> Free Start </span>
+                <span class="text-[10px] font-normal">
+                  Your account is ready in 60s
+                </span>
+              </button>
+            </form>
+          </div>
+          <div class="ml-8 hidden lg:block">
+            <img src="images/house-3.png" alt="House 3" />
+          </div>
+        </div>
+      </section>
+      <!-- ENTER EMAIL SECTION END -->
+
+      <!-- APPOINTMENT SECTION START -->
+      <section>
+        <div
+          class="container mx-auto px-8 md:px-12 lg:px-24 max-w-[120rem] flex justify-center items-center py-16"
+        >
+          <!-- SECTION CONTENT -->
+          <div class="text-center flex flex-col justify-center items-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-textDarkGrey mb-8">
+              <span> Want Information about our Real Estate Manager? </span>
+              <span class="text-primary block mt-2.5">
+                Make a call with us.📞
+              </span>
+            </h2>
+            <a
+              href="#"
+              class="bg-primary hover:bg-primary/80 transition-all text-white text-base py-3.5 px-8 rounded-md block leading-none shadow-lg shadow-primary hover:scale-[1.01] hover:-translate-y-0.5"
+            >
+              Request an appointment now.
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- APPOINTMENT SECTION END -->
     </main>
     <!-- MAIN CONTAINER END -->
   </body>
